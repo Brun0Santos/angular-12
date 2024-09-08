@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, AfterViewInit  } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Tecnico } from 'src/app/models/tecnico';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -19,9 +20,15 @@ export class TecnicoListComponent implements OnInit, AfterViewInit  {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'acoes'];
   dataSource = new MatTableDataSource<Tecnico>(this.ELEMENT_DATA);
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
+
+  rua : string = ''
 
   ngOnInit(): void {
+    this.authService.getCep().subscribe(reponse => {
+      this.rua = reponse["logradouro"]
+
+    })
   }
 
 
