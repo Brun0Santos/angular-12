@@ -28,6 +28,8 @@ export class TecnicoListComponent implements OnInit, AfterViewInit  {
     this.authService.getCep().subscribe(reponse => {
       this.rua = reponse["logradouro"]
 
+    }, () => {
+      console.log("Erro")
     })
   }
 
