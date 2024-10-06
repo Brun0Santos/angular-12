@@ -9,7 +9,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  getCep(){
-    return this.http.get("https://viacep.com.br/ws/08555680/json/")
+  getCep() {
+    return this.http.get("https://viacep.com.br/ws/085556801/json/")
   }
 }
