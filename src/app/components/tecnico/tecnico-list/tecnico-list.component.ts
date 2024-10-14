@@ -29,7 +29,7 @@ export class TecnicoListComponent implements OnInit, AfterViewInit {
       this.rua = reponse["logradouro"]
 
     }, () => {
-      console.log("Erro aqui")
+      console.log("Erro aqui, realizando alguns testes")
     })
   }
 
@@ -39,6 +39,4 @@ export class TecnicoListComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
-
-
 }
