@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TecnicoListComponent } from './tecnico-list.component';
 
 const routes: Routes = [
-  {path: '', component: TecnicoListComponent}
+  { path: '', component: TecnicoListComponent }
 ];
 
 @NgModule({
