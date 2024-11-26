@@ -12,7 +12,7 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
     // this.router.navigate(['homes'])
-    localStorage.setItem("token", "wdqw1321312")
+    localStorage.setItem("token", "wdqw13312")
   }
 
 }
